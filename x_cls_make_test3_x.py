@@ -1,6 +1,7 @@
 class x_cls_make_test3_x:
-    def __init__(self) -> None:
-        pass
+    def __init__(self, ctx: object | None = None) -> None:
+        # preserve backwards compatibility while accepting a context
+        self._ctx = ctx
 
     def run(self) -> str:
         return "Hello world!"
